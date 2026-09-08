@@ -1,0 +1,76 @@
+import { useState } from "react";
+
+function TaskForm({ adicionarTarefa }) {
+
+  const [nome, setNome] = useState("");
+
+  const [data, setData] = useState("");
+
+  const [descricao, setDescricao] = useState("");
+
+  const [prioridade, setPrioridade] = useState("");
+
+  const cadastrarTarefa = (event) => {
+    event.preventDefault();
+
+    if (!nome || !data || !descricao || !prioridade) {
+      alert("Preencha todos os campos.");
+      return;
+    }
+
+    const novaTarefa = {
+      id: Date.now(),
+      nome: nome,
+      data: data,
+      descricao: descricao,
+      prioridade: prioridade,
+      concluida: false
+    };
+
+    adicionarTarefa(novaTarefa);
+    setNome("");
+    setData("");
+    setDescricao("");
+    setPrioridade("");
+  };
+
+  return (
+    <form onSubmit={cadastrarTarefa}>
+      <h2>Nova tarefa</h2>
+      <label>Nome da tarefa</label>
+      <input
+        type="text"
+        value={nome}
+        onChange={(event) => setNome(event.target.value)}
+        placeholder="Nome da tarefa"
+      />
+      <label>Data</label>
+      <input
+        type="date"
+        value={data}
+        onChange={(event) => setData(event.target.value)}
+      />
+      <label>Descrição</label>
+      <textarea
+        value={descricao}
+        onChange={(event) => setDescricao(event.target.value)}
+        placeholder="Descrição da tarefa"
+      />
+      <label>Prioridade</label>
+      <select
+        value={prioridade}
+        onChange={(event) => setPrioridade(event.target.value)}
+      >
+        <option value="">Selecione</option>
+        <option value="Baixa">Baixa</option>
+        <option value="Média">Média</option>
+        <option value="Alta">Alta</option>
+      </select>
+      <button type="submit">
+        Adicionar tarefa
+      </button>
+    </form>
+  );
+}
+
+export default TaskForm;
