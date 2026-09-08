@@ -1,13 +1,13 @@
 import { useState } from "react";
-
 function TaskForm({ adicionarTarefa }) {
-
+    
+// useState armazena e atualiza o nome digitado pelo usuário.
   const [nome, setNome] = useState("");
-
+// useState armazena e atualiza a data da tarefa.
   const [data, setData] = useState("");
-
+// useState armazena e atualiza a descrição da tarefa.
   const [descricao, setDescricao] = useState("");
-
+// useState armazena e atualiza a prioridade selecionada.
   const [prioridade, setPrioridade] = useState("");
 
   const cadastrarTarefa = (event) => {
