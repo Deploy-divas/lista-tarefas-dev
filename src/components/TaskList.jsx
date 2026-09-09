@@ -1,4 +1,4 @@
-function TaskList({ tarefas }) {
+function TaskList({ tarefas, removerTarefa, concluirTarefa }) {
 
   if (tarefas.length === 0) {
     return <p>Nenhuma tarefa cadastrada.</p>;
@@ -15,6 +15,9 @@ function TaskList({ tarefas }) {
           <p>{tarefa.descricao}</p>
           <p>Data: {new Date(tarefa.data + "T00:00:00").toLocaleDateString("pt-BR")}</p>
           <p>Prioridade: {tarefa.prioridade}</p>
+
+          <button onClick={() => removerTarefa(tarefa.id)}>Apagar</button>
+          <button onClick={() => concluirTarefa(tarefa.id)}>{tarefa.concluida ? "Desfazer" : "Completar"}</button>
         </article>
       ))}
     </section>
