@@ -5,7 +5,7 @@ function TaskList({ tarefas, removerTarefa, concluirTarefa }) {
   }
 
   return (
-    <section>
+    <section className="bg-amber-400 m-10">
       <h2>Minhas tarefas</h2>
       {/* map percorre o array de tarefas e cria
           um elemento para cada tarefa. */}

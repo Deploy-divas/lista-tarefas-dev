@@ -47,9 +47,9 @@ function App() {
   };
 
   return (
-    <main>
+    <main className="bg-fundo w-full min-h-screen">
 
-      <h1>Lista de Tarefas do Programador</h1>
+      <h1 className="text-center text-5xl font-padrao font-bold text-azul-claro p-15">Lista de Tarefas do Programador</h1>
       <Filtro selecionarStatus={setStatusSelecionado} />
       <TaskForm adicionarTarefa={adicionarTarefa} />
 

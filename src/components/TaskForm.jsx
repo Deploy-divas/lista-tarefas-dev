@@ -35,7 +35,7 @@ function TaskForm({ adicionarTarefa }) {
   };
 
   return (
-    <form onSubmit={cadastrarTarefa}>
+    <form onSubmit={cadastrarTarefa} className="bg-amber-400 m-10">
       <h2>Nova tarefa</h2>
       <label>Nome da tarefa</label>
       <input
