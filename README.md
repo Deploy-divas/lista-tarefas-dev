@@ -1,16 +1,70 @@
-# React + Vite
+# Lista de Tarefas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web desenvolvida em React com Vite para gerenciamento de tarefas. O projeto permite organizar atividades de forma simples por meio de uma interface prática.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Visualização das tarefas
+* Adição de novas tarefas
+* Exclusão de tarefas
+* Marcação de tarefas como concluídas
 
-## React Compiler
+## Tecnologias
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* React
+* Vite
+* JavaScript
+* Tailwindcss
 
-## Expanding the ESLint configuration
+## Como executar
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Pré-requisitos
+
+É necessário ter o **Node.js** e o **npm** instalados.
+
+### Instalação
+
+Clone o repositório:
+
+```bash
+git clone https://github.com/Deploy-divas/lista-tarefas-dev.git
+```
+
+Entre na pasta do projeto:
+
+```bash
+cd lista-tarefas-dev
+```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Inicie o projeto:
+
+```bash
+npm run dev
+```
+
+Depois, acesse o endereço informado pelo Vite no terminal, normalmente:
+
+```text
+http://localhost:5173
+```
+
+## Objetivo
+
+O projeto foi desenvolvido para praticar conceitos de desenvolvimento frontend com React, incluindo criação de componentes, gerenciamento de estados e organização de uma aplicação web.
+
+## Equipe
+
+Projeto desenvolvido pela equipe Deploy Divas.
+
+
+### INTEGRANTES DO GRUPO
+
+* AMANDA SILVA DA MATA - 578525
+* BEATRIZ MANTOVANI DA CRUZ - 573824
+* LAURA SAMPAIO NEVES - 570802

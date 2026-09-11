@@ -3,7 +3,6 @@
 
 @theme {
   --color-roxo-vibrante: #852EC7;
-  --color-lilas: #B45BE8;
   --color-azul-claro: #45BDE8;
   --color-turquesa: #51D9A5;
   --color-amarelo: #F4C43E;
@@ -13,8 +12,6 @@
   --color-fundo-cards: #252547;
   --color-roxo-claro: #31315E;
   
-
-  --font-padrao: "Verdana", sans-serif;
   --font-corpo: "Dosis", sans-serif;
   
 }
