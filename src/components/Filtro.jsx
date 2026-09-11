@@ -1,9 +1,9 @@
 
 const Filtro = ({ selecionarStatus }) => {
   const opcoes = [
-    { valor: "todas", texto: "Todas" },
-    { valor: "pendentes", texto: "Pendentes" },
-    { valor: "concluidas", texto: "Concluídas" },
+    { valor: "todas", texto: "Todas", cor: "bg-turquesa" },
+    { valor: "pendentes", texto: "Pendentes", cor: "bg-laranja" },
+    { valor: "concluidas", texto: "Concluídas", cor: "bg-amarelo" },
   ];
 
   return (
@@ -11,7 +11,7 @@ const Filtro = ({ selecionarStatus }) => {
       <h4 className="py-2 text-white font-corpo text-2xl">Filtros</h4>
       <div className="flex gap-5">
         {opcoes.map((opcao) => (
-          <button key={opcao.valor} onClick={() => selecionarStatus(opcao.valor)} className="px-5 py-2 bg-azul-escuro text-white rounded-xl font-corpo shadow-2xl hover:bg-azul active:bg-azul-claro active:text-azul-escuro transition duration-200">
+          <button key={opcao.valor} onClick={() => selecionarStatus(opcao.valor)} className={`px-5 py-2 ${opcao.cor} text-white text-shadow-lg/20 rounded-xl font-corpo shadow-2xl hover:bg-azul active:bg-azul-claro active:text-azul-escuro transition duration-200`}>
             {opcao.texto}
           </button>
         ))}

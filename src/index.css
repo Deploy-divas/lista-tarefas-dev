@@ -1,14 +1,18 @@
-@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap');
+@import "tailwindcss";
 
 @theme {
+  --color-roxo-vibrante: #852EC7;
+  --color-lilas: #B45BE8;
+  --color-azul-claro: #45BDE8;
+  --color-turquesa: #51D9A5;
+  --color-amarelo: #F4C43E;
+  --color-laranja: #F5A45B;
+
   --color-fundo: #130833;
   --color-fundo-cards: #252547;
   --color-roxo-claro: #31315E;
   
-  --color-azul-claro: #78D2F2;
-  --color-azul-escuro: #002947;
-  --color-azul: #004B82;
 
   --font-padrao: "Verdana", sans-serif;
   --font-corpo: "Dosis", sans-serif;

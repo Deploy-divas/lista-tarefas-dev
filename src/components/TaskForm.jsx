@@ -35,37 +35,50 @@ function TaskForm({ adicionarTarefa }) {
   };
 
   return (
-    <form onSubmit={cadastrarTarefa} className="bg-amber-400 m-10">
+    <form onSubmit={cadastrarTarefa} className="flex justify-between items-center text-white bg-fundo-cards m-10 border-2 border-roxo-claro rounded-xl px-10 py-4 font-padrao font-semibold shadow-2xl ">
       <h2>Nova tarefa</h2>
-      <label>Nome da tarefa</label>
-      <input
-        type="text"
-        value={nome}
-        onChange={(event) => setNome(event.target.value)}
-        placeholder="Nome da tarefa"
-      />
-      <label>Data</label>
-      <input
-        type="date"
-        value={data}
-        onChange={(event) => setData(event.target.value)}
-      />
-      <label>Descrição</label>
-      <textarea
-        value={descricao}
-        onChange={(event) => setDescricao(event.target.value)}
-        placeholder="Descrição da tarefa"
-      />
-      <label>Prioridade</label>
-      <select
-        value={prioridade}
-        onChange={(event) => setPrioridade(event.target.value)}
-      >
-        <option value="">Selecione</option>
-        <option value="Baixa">Baixa</option>
-        <option value="Média">Média</option>
-        <option value="Alta">Alta</option>
-      </select>
+
+      <div className="flex flex-col px-10 py-4 gap-3">
+        <label>Nome da tarefa</label>
+        <input
+          type="text"
+          value={nome}
+          onChange={(event) => setNome(event.target.value)}
+          placeholder="Nome da tarefa"
+        />
+      </div>
+
+      <div className="flex flex-col px-10 py-4 gap-3">
+        <label>Data</label>
+        <input
+          type="date"
+          value={data}
+          onChange={(event) => setData(event.target.value)}
+        />
+      </div>
+
+      <div className="flex flex-col px-10 py-4 gap-3">
+        <label>Descrição</label>
+        <textarea
+          value={descricao}
+          onChange={(event) => setDescricao(event.target.value)}
+          placeholder="Descrição da tarefa"
+        />
+      </div>
+
+      <div className="flex flex-col px-10 py-4 gap-3">
+        <label>Prioridade</label>
+        <select
+          value={prioridade}
+          onChange={(event) => setPrioridade(event.target.value)}
+        >
+          <option value="">Selecione</option>
+          <option value="Baixa">Baixa</option>
+          <option value="Média">Média</option>
+          <option value="Alta">Alta</option>
+        </select>
+      </div>
+
       <button type="submit">
         Adicionar tarefa
       </button>
